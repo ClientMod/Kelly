@@ -85,8 +85,17 @@ function game2(){
 
 function game3(){
     Kelly.user.setGame(`on ${Kelly.guilds.array().length} guilds with ${Kelly.users.size} users`);
-    setTimeout(game1, 30000);
+    setTimeout(game4, 30000);
 };
+
+function game4(){
+    
+    var PREFIX = `k?`;
+    
+    Kelly.user.setGame(`Kelly is now open source! type ${PREFIX}src`);
+    setTimeout(game1, 30000);
+
+}
 
 Kelly.on(`ready`, () => {
 
