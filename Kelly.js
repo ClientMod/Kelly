@@ -34,19 +34,22 @@ Kelly.on(`message`, message => {
 Kelly.on(`guildCreate`, guild => {
 
     guild.owner.send(`I've been added to your discord, i just wanted to say thank you. here is info on how to use the bot:\n**1)** The default prefix is \`\`${PREFIX}\`\`\n**2)** Commands don't work in dm\n**3)** Support server is: https://discord.gg/Z5jVg2G`);
-    console.log(`[Spy] I was added to ${guild.name} (ID: ${guild.id}) - Member Count: ${guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] I was added to ${guild.name} (ID: ${guild.id}) - Member Count: ${guild.memberCount}`);
 
 })
 
 Kelly.on(`guildDelete`, guild => {
     
-    console.log(`[Spy] I was removed from ${guild.name} (ID: ${guild.id}) - Member Count: ${guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] I was removed from ${guild.name} (ID: ${guild.id}) - Member Count: ${guild.memberCount}`);
     
 });
 
 Kelly.on(`guildMemberAdd`, (member, message) => {
 
-    console.log(`[Spy] ${member.user.username}#${member.user.discriminator} joined ${member.guild.name} (ID: ${member.guild.id}) - Member Count: ${member.guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${member.user.username}#${member.user.discriminator} joined ${member.guild.name} (ID: ${member.guild.id}) - Member Count: ${member.guild.memberCount}`);
 
     /*db.fetchObject(`messageChannel_${member.guild.id}`).then(i => {
 
@@ -66,7 +69,8 @@ Kelly.on(`guildMemberAdd`, (member, message) => {
 
 Kelly.on(`guildMemberRemove`, member => {
     
-    console.log(`[Spy] ${member.user.username}#${member.user.discriminator} left ${member.guild.name} (ID: ${member.guild.id}) - Member Count: ${member.guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${member.user.username}#${member.user.discriminator} left ${member.guild.name} (ID: ${member.guild.id}) - Member Count: ${member.guild.memberCount}`);
     
 });
 

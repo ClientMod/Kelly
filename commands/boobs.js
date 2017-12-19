@@ -16,6 +16,8 @@ exports.run = (Kelly, message, args) => {
             return message.channel.send(`I cannot send this outside a NSFW channel!, Please switch to a NSFW channel to use this command.`); 
         }
     }
-	console.log(`[Spy] ${message.author.username}#${message.author.discriminator} used the Boobs command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
+	
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} used the boobs command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
 
 }

@@ -20,7 +20,8 @@ exports.run = (Kelly, message, args) => {
     let cmd = args.join(' ');
     reload(message, cmd);
     }else{
-        console.log(message.author.tag + " tried to RELOAD a COMMAND in " + message.guild.name + ".")
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} tried using the reload command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
         message.channel.send("Only Tyler#1975 can use this")
     }
 }

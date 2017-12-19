@@ -26,7 +26,8 @@ exports.run = (Kelly, message, args) => {
             embed
         });
 
-        console.log(`[Spy] ${message.author.username}#${message.author.discriminator} used the Purge command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} used the purge command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
 
         message.channel.bulkDelete(fetched).catch(error => message.channel.send(`Error: ${error}`));
 

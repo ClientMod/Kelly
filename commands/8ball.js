@@ -31,7 +31,7 @@ function eightBall() {
 }
 
 exports.run = (Kelly, message, args) => {
-
+	
     const question = args.join(` `);
 
     if(!question) return message.reply(`You Might wanna ask a question...`);
@@ -42,6 +42,7 @@ exports.run = (Kelly, message, args) => {
     .setDescription(`Question:\n${question} \n\nAnswer:\n${eightBall()}`);
     message.channel.send({embed});
 	
-	console.log(`[Spy] ${message.author.username}#${message.author.discriminator} used the 8ball command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} used the 8ball command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
 	
 }

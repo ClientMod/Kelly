@@ -8,5 +8,8 @@ exports.run = (Kelly, message, args) => {
             .setColor(hexcols[~~(Math.random() * hexcols.length)])
             .setDescription(Kelly.guilds.map(g=>g.name).join(`, `))
     })
-	console.log(`[Spy] ${message.author.username}#${message.author.discriminator} used the Servers command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
+	
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} used the servers command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);;
+
 }

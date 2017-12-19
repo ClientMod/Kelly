@@ -26,7 +26,8 @@ exports.run = (client, message, args) => {
             client.user.setGame(game);
             message.channel.send(`Changed Game To ` + game);
     }}else{
-        console.log(`[Spy] ${message.author.username}#${message.author.discriminator} tried using the Eval command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} tried using the setgame command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
         message.channel.send("Only Tyler#1975 can use this");
         }
     })

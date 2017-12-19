@@ -10,6 +10,7 @@ exports.run = async (Kelly, message, args) => {
     .setDescription(`\nPing: ${m.createdTimestamp - message.createdTimestamp}ms\n\nAPI Ping: ${Math.round(Kelly.ping)}ms`);
     m.edit({embed});
 
-    console.log(`[Spy] ${message.author.username}#${message.author.discriminator} used the Ping command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} used the ping command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
 
 }

@@ -30,6 +30,6 @@ exports.run = (client, message, args) => {
   .setFooter(`Made by ${AUTHOR}#1975 | ${NAME} ${VERSION}`)
   message.channel.send({embed});
   
-  console.log(`[Spy] ${message.author.username}#${message.author.discriminator} used the Info command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
-
+	var time = new Date();
+	console.log(`[${`Spy - ` + time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] ${message.author.username}#${message.author.discriminator} used the info command in ${message.guild.name} (ID: ${message.guild.id}) - Member Count: ${message.guild.memberCount}`);
 }
