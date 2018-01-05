@@ -104,8 +104,9 @@ function game4(){
 Kelly.on(`ready`, () => {
 
     var PREFIX = `k?`;
+    var time = new Date();
 
-    console.log(`Ready in ${Kelly.guilds.array().length} Servers:\n${Kelly.guilds.map(g=>g.name + ` (ID: ${g.id}) - Member Count: ${g.memberCount}`).join(`\n`)}`);
+    console.log(`[time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] Ready in ${Kelly.guilds.array().length} Servers:\n${Kelly.guilds.map(g=>g.name + ` (ID: ${g.id}) - Member Count: ${g.memberCount}`).join(`\n`)}`);
     Kelly.user.setGame(`${PREFIX}help | v${VERSION}`)
     setTimeout(game1, 30000);
 });
